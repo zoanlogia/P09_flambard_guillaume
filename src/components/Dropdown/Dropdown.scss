@@ -1,0 +1,12 @@
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.up {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease-in-out;
+}
