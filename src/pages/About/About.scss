@@ -13,4 +13,10 @@
     background-position: center;
     background-size: cover;
     border-radius: 25px;
+
+    &__container {
+        @media screen and (min-width: 1024px) {
+            margin: 0 15%;
+        }
+    }
 }

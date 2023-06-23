@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { fetchData } from "../../utils/fetch.js";
 import Star from "../../components/Star/Star.jsx";
 import Carousel from "../../components/Carousel/Carousel.jsx";
+import Footer from "../../layouts/Footer/Footer.jsx";
 
 const Accomodation = () => {
   const { id } = useParams();
@@ -91,6 +92,7 @@ const Accomodation = () => {
           />
         </div>
       </section>
+      <Footer />
     </>
   );
 };

@@ -3,6 +3,7 @@ import Gallery from "../../layouts/Gallery/Gallery";
 import Header from "../../layouts/Header/Header";
 import "./Home.scss";
 import { fetchData } from "../../utils/fetch.js";
+import Footer from "../../layouts/Footer/Footer.jsx";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -26,6 +27,7 @@ const Home = () => {
         </div>
       </section>
       {data ? <Gallery data={data} /> : <p>chargement...</p>}
+      <Footer />
     </>
   );
 };

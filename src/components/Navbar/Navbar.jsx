@@ -20,7 +20,8 @@ const Navbar = () => {
         <img src={logo} alt="logo" />
     
         <ul>
-            <li><NavLink className={active} onClick={handleClick} to={"/"}>Accueil</NavLink></li>
+            <li>
+                <NavLink className={active} onClick={handleClick} to={"/"}>Accueil</NavLink></li>
             <li><NavLink className={active} onClick={handleClick} to={"/about"}>A propos</NavLink></li>
         </ul>
     </nav>
