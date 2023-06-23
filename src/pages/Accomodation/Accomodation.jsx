@@ -11,6 +11,11 @@ const Accomodation = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
   // const navigate = useNavigate();
+  const [active, setActive] = useState('active');
+
+  if (!active){
+    setActive('inactive');
+  }
 
   useEffect(() => {
     (async () => {
@@ -73,7 +78,10 @@ const Accomodation = () => {
           })}
           
         </div>
-        <div className="dropdown">
+      </section>
+
+      <section className={`dropdowns container ${active}`}>
+      <div className="dropdown">
           <Dropdown title="Description" text={accomodation.description} />
           <Dropdown
             title="Equipements"

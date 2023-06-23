@@ -1,10 +1,84 @@
+@import '../../variables.scss';
+
+.dropdown {
+
+    display: flex;
+
+    
+    justify-content: space-between;
+    gap: 1em;
+
+    @media screen and (max-width: 548px) {
+        flex-wrap: wrap;
+        gap: 300px;
+    }
+
+    &__container {
+        margin: 1em 0;
+        position: relative;
+
+        background-color: $primary-color;
+        height: 100%;
+        color: $secondary-color;
+        border-radius: 10px;
+        width: 100%;
+        
+        line-height: 55px;
+
+        .title {
+
+            padding-left: 1.5em;
+        }
+
+
+        cursor: pointer;
+
+        .text {
+            padding-top: 2em;
+            padding-left: 1.5em;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            right: 1.5em;
+            font-size: 1.5em;
+            bottom: 0;
+        }
+
+        .content {
+            width: 100%;
+            background-color: $quaternary-color;
+            color: $primary-color;
+
+            &.active {
+                display: block;
+                /* show content when active */
+                height: max-content;
+                border-radius: 0 0 10px 10px;
+                padding: 1em 0;
+            }
+
+        }
+    }
+}
 
 .content {
     display: none;
 }
 
 .content.active {
+
     display: block;
+    min-height: max-content;
+    border-radius: 0 0 10px 10px;
+    padding: 1em 0;
+    height: 100%;
 }
 
 .up {

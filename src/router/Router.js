@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
-import Accomodation from "../pages/Accomodation/Accomodation.jsx";
+import Accomodation from "../pages/Accomodation/Accomodation";
 
 
 const Router = () => {
@@ -12,7 +12,7 @@ const Router = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path={`/about/`} element={<About />} />
           <Route path={`/accomodation/:id`} element={<Accomodation />} />
         </Routes>
       </BrowserRouter>
