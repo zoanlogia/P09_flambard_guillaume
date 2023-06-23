@@ -1,0 +1,22 @@
+.about-hero {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url('../../assets/jpeg/bgAbout.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+
+    &__container {
+        @media screen and (min-width: 1024px) {
+            margin: 0 15%;
+        }
+    }
+}

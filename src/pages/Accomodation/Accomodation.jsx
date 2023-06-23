@@ -6,11 +6,17 @@ import { useEffect, useState } from "react";
 import { fetchData } from "../../utils/fetch.js";
 import Star from "../../components/Star/Star.jsx";
 import Carousel from "../../components/Carousel/Carousel.jsx";
+import Footer from "../../layouts/Footer/Footer.jsx";
 
 const Accomodation = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
   // const navigate = useNavigate();
+  const [active, setActive] = useState('active');
+
+  if (!active){
+    setActive('inactive');
+  }
 
   useEffect(() => {
     (async () => {
@@ -73,7 +79,10 @@ const Accomodation = () => {
           })}
           
         </div>
-        <div className="dropdown">
+      </section>
+
+      <section className={`dropdowns container ${active}`}>
+      <div className="dropdown">
           <Dropdown title="Description" text={accomodation.description} />
           <Dropdown
             title="Equipements"
@@ -83,6 +92,7 @@ const Accomodation = () => {
           />
         </div>
       </section>
+      <Footer />
     </>
   );
 };
