@@ -50,3 +50,11 @@
     color: $secondary-color;
 
 }
+
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    
+}

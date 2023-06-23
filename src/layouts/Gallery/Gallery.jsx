@@ -1,10 +1,13 @@
 import Card from "../../components/Card/Card.jsx"
 import "./Gallery.scss"
 
-const Gallery = () => {
+
+const Gallery = ({data}) => {
   return (
     <div className="gallery container">
-        <Card />
+      {data.map(elem => 
+        <Card key={elem.id} elem={elem} />
+      )}
     </div>
   )
 }

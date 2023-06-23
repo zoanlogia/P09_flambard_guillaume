@@ -1,0 +1,10 @@
+@import "../../variables";
+
+.star {
+    color: $quaternary-color;
+    font-size: 1.3em;
+    
+    &.active {
+        color: $primary-color;
+    }
+}
