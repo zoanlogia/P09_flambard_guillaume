@@ -3,12 +3,18 @@ import angle from "../../assets/svg/angle.png";
 import { useRef } from "react";
 
 const Carousel = ({ images }) => {
+  
   const carouselDiv = useRef();
 
   const next = () => {
     const width = carouselDiv.current.clientWidth;
     const scrollLeft = carouselDiv.current.scrollLeft;
     carouselDiv.current.scrollLeft = scrollLeft + width;
+    // Si le carousel est à la dernière photo on revient à la premiere
+    if (carouselDiv.current.scrollLeft + width === carouselDiv.current.scrollWidth) {
+
+      carouselDiv.current.scrollLeft = 0;
+    }
   };
 
   const prev = () => {
@@ -16,6 +22,9 @@ const Carousel = ({ images }) => {
     const scrollLeft = carouselDiv.current.scrollLeft;
     carouselDiv.current.scrollLeft = scrollLeft - width;
   };
+
+
+
 
   return (
     <div id="carousel" className="carousel">

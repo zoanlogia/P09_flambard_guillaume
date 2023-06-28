@@ -70,9 +70,9 @@ const Accomodation = () => {
       <section className="badge container">
         <div className="badge__content">
 
-          {accomodation.tags.map((tag, index) => {
+          {accomodation.tags.map((tag) => {
             return (
-              <div key={index} className="badge__item">
+              <div key={tag.id} className="badge__item">
                 <p>{tag}</p>
               </div>
             );
@@ -86,8 +86,8 @@ const Accomodation = () => {
           <Dropdown title="Description" text={accomodation.description} />
           <Dropdown
             title="Equipements"
-            text={accomodation.equipments.map((equipment, index) => (
-              <p key={index}>{equipment}</p>
+            text={accomodation.equipments.map((equipment) => (
+              <p key={equipment.id}>{equipment}</p>
             ))}
           />
         </div>
